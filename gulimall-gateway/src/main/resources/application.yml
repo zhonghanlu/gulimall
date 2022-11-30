@@ -1,0 +1,14 @@
+server:
+  port: 88
+spring:
+  application:
+    name: gulimall-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: test-route
+          uri: https://blog.csdn.net
+          order: 1
+          predicates:
+            - Path=/csdn
+
